@@ -1,5 +1,6 @@
 from django.db import models
-from django.core.validators import MinValueValidator
+from django.core.validators import MinValueValidator,MaxValueValidator
+
 # Create your models here.
 
 class Manufacturer(models.Model):
@@ -8,6 +9,12 @@ class Manufacturer(models.Model):
      country = models.CharField(max_length=50)
      website = models.CharField(max_length=50)
      description = models.TextField(max_length=500)
+     founded_in = models.IntegerField(
+         validators=[
+             MinValueValidator(1972),
+             MaxValueValidator(2100)
+         ]
+     )
      def __str__(self):
           return f"{self.name}"
 
@@ -15,7 +22,12 @@ class Manufacturer(models.Model):
 class Console(models.Model):
      name = models.CharField(max_length=50)
      slug = models.CharField(unique=True,blank=True)
-     release_date= models.DateTimeField(auto_now=True)
+     release_year = models.IntegerField(
+         validators=[
+             MinValueValidator(1972),
+             MaxValueValidator(2100)
+         ]
+     )
      console_type = models.CharField(max_length=25)
      description = models.TextField(max_length=300)
      is_active = models.BooleanField(default=True)
