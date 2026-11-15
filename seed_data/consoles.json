@@ -1,0 +1,35 @@
+{
+  "manufacturers": [
+    {
+      "name": "Sony Interactive Entertainment",
+      "slug": "sony",
+      "country": "Japan",
+      "website": "https://www.playstation.com",
+      "description": "Creator of the PlayStation console lineup.",
+      "founded_in": 1993,
+      "logo_file": "manufacturers/sony.png"
+    },
+    {
+      "name": "Nintendo",
+      "slug": "nintendo",
+      "country": "Japan",
+      "website": "https://www.nintendo.com",
+      "description": "Japanese multinational video game company.",
+      "founded_in": 1972,
+      "logo_file": "manufacturers/nintendo.png"
+    }
+  ],
+  "consoles": [
+    {
+      "name": "PlayStation",
+      "slug": "playstation-1",
+      "manufacturer_slug": "sony",
+      "release_year": 1994,
+      "console_type": "Home Console",
+      "generation": 5,
+      "description": "32-bit home video game console developed by Sony.",
+      "is_active": false,
+      "image_file": "consoles/ps1.jpg"
+    }
+  ]
+}
