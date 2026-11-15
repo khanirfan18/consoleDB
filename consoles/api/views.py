@@ -23,7 +23,6 @@ class ConsoleDetailAV(generics.RetrieveUpdateDestroyAPIView):
     lookup_field = 'slug'
     permission_classes = [IsAuthenticatedOrReadOnly]
 
-
 class ManufacturerAV(generics.ListAPIView):
     queryset = models.Manufacturer.objects.all()
     serializer_class = serializers.ManufacturerSerializer
