@@ -10,6 +10,7 @@ __pycache__/
 
 # Local Database
 db.sqlite3
+db_backup.sqlite3
 
 # OS generated files
 .DS_Store
@@ -23,4 +24,7 @@ staticfiles/
 
 # IDEs / Editor Folders (VSCodium, IntelliJ, Neovim)
 .vscode/
-.idea/
+.idea/db_backup.sqlite3
+
+# SQLite database files
+*.sqlite3
